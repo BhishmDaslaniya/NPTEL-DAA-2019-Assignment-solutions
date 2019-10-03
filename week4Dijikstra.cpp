@@ -60,8 +60,7 @@ int main(){
     ll x,y,z;
     for(ll i = 0 ; i < m ; i++){
         cin>>x>>y>>z;
-        ll temp = max(x,z);
-        V = max(V,temp);
+        V = max(V,max(x,z));
         mat[x][z] = min(mat[x][z],y);
         mat[z][x] = min(mat[z][x],y);
     }
